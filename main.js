@@ -13,7 +13,7 @@ if (
   var localValue = getLocal;
   addTasks();
 } else {
-  var id = 12345678101;
+  var id = 1;
   var localValue = [];
 }
 
@@ -59,7 +59,7 @@ btnAdd.onclick = function () {
       idValue: id,
       title: input.value,
     };
-
+    input.value = "";
     localValue.push(taskValue);
     window.localStorage.setItem("tasks", JSON.stringify(localValue));
 
